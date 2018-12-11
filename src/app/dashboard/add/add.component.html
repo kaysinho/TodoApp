@@ -1,0 +1,38 @@
+<!-- Modal -->
+<div class="modal fade" id="addComponent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar tarea</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <input type="text" id="inputDescripcion" [(ngModel)]="todo.description" class="form-control" placeholder="Descripción" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <select class="form-control" [(ngModel)]="todo.date" placeholder="Seleccione un día" required id="selectDia">
+            <option value="" selected>Seleccione el dia</option>
+            <option *ngFor="let day of days" value="{{day}}">{{day | date:'EEEE, MMMM d'}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <select class="form-control" [(ngModel)]="todo.hour" placeholder="Seleccione una hora" required id="selectHora">
+            <option value="" selected>Seleccione la hora</option>
+            <option *ngFor="let hour of hours" value="{{hour}}">{{hour}}</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="add()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>

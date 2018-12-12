@@ -21,6 +21,7 @@ export class AddComponent implements OnInit {
 
 
   add(){
+    let myTodo: Todo = new Todo(this.todo.description, this.todo.date, this.todo.hour)
     this._todoService.add(this.todo)
   }
 }

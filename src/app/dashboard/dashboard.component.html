@@ -5,159 +5,17 @@
       <thead>
         <tr class="text-center">
           <th scope="col"></th>
-          <th scope="col">Lunes</th>
-          <th scope="col">Martes</th>
-          <th scope="col">Miercoles</th>
-          <th scope="col">Jueves</th>
-          <th scope="col">Viernes</th>
-          <th scope="col">Sabado</th>
-          <th scope="col">Domingo</th>
+          <th *ngFor="let day of days">{{day | date:'EEEE dd'}}</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">6a</th>
-          <td></td>
-          <td></td>
-          <td class="timetable-workout expired">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr *ngFor="let hour of hours">
+          {{hour}}
+          <th *ngFor="let day of days">
+            {{ getTodo(day, hour).description }}
+          </th>
         </tr>
-        <tr>
-          <th scope="row">7a</th>
-          <td></td>
-          <td></td>
-          <td class="timetable-workout">Classes Name</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">8a</th>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">9a</th>
-          <td class="timetable-workout">Classes Name</td>
-          <td class="timetable-workout">Classes Name</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">10a</th>
-          <td></td>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td></td>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">11a</th>
-          <td></td>
-          <td class="timetable-workout">Classes Name</td>
-          <td></td>
-          <td class="timetable-workout">Classes Name</td>
-          <td class="timetable-workout">Classes Name</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">12p</th>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">1p</th>
-          <td class="timetable-workout">Classes Name</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">2p</th>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">3p</th>
-          <td class="timetable-workout">Classes Name</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="timetable-workout">Classes Name</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">4p</th>
-          <td></td>
-          <td></td>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">5p</th>
-          <td></td>
-          <td></td>
-          <td class="timetable-workout">Classes Name</td>
-          <td class="timetable-workout">Classes Name</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">6p</th>
-          <td></td>
-          <td class="timetable-workout">30 MINUTES
-            <br> 12:35 pm - 01:05 pm
-            <br>Classes Name</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+        
       </tbody>
     </table>
   </div>

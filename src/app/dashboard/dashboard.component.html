@@ -1,22 +1,27 @@
+<div class="table-responsive card">
+  <table class="table ">
+    <thead>
+      <tr class="text-center">
+        <th scope="col">ID</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Hora</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos">
+        <td>{{todo.id}}</td>
+        <td>{{todo.description}}</td>
+        <td>{{todo.date | date:'EEEE dd, MMMM yyyy'}}</td>
+        <td>{{todo.hour}}</td>
+        <td>
+            <button type="button" class="btn btn-primary">Editar</button>
+            <button type="button" class="btn btn-success">Completar</button>
+            <button type="button" class="btn btn-danger">Borrar</button>
+        </td>
+      </tr>
 
-
-  <div class="table-responsive card">
-    <table class="timetable table ">
-      <thead>
-        <tr class="text-center">
-          <th scope="col"></th>
-          <th *ngFor="let day of days">{{day | date:'EEEE dd'}}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let hour of hours">
-          {{hour}}
-          <th *ngFor="let day of days">
-            {{ getTodo(day, hour).description }}
-          </th>
-        </tr>
-        
-      </tbody>
-    </table>
-  </div>
-  <!-- timetable -->
+    </tbody>
+  </table>
+</div>

@@ -46,39 +46,8 @@
   
 
 
-
-.timetable-workout { 
-    font-size: 10px; 
-    text-transform: capitalize; 
-    background-color: #3399ff; 
-    font-weight: 700; 
-    cursor: pointer; 
-}
-
 .btn-info{
     background-color: #060D66 !important;
-}
-
-.expired { 
-    background-color: #F49E9C; 
-}
-
-.expired-today { 
-    background-color: #ff0066; 
-}
-
-.timetable-workout,.timetable.table>tbody>tr>td {
-     color: #fff; 
-    }
-.timetable,.table>tbody>tr>th {
-     font-size: 14px; 
-     text-transform: capitalize; 
-     font-weight: 700; 
-    }
-.timetable,.table>thead>tr>th { 
-    font-size: 14px; 
-    text-transform: capitalize; 
-    font-weight: 700; 
 }
 
 .calendar { margin-top: 16px;}
